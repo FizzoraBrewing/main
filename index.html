@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fizzora: Premium Kombucha with Probiotics | Natural Health Beverage</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Discover Fizzora - Indian-inspired premium kombucha packed with probiotics. A low-sugar, plant-based health drink for gut health and immunity.">
+    <meta name="keywords" content="kombucha, probiotics, healthy drink, low sugar beverage, gut health, Indian flavors, probiotic drink, natural health, German kombucha">
+    
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="Fizzora: Where Sparkle Meets Health">
+    <meta property="og:description" content="Premium Indian-inspired kombucha with powerful probiotics for gut health and immunity.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630">
+    <meta property="og:url" content="https://fizzora.de">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/api/placeholder/32/32">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <style>
+        :root {
+            --green: #2ecc71;
+            --orange: #f39c12;
+            --yellow: #f1c40f;
+            --black: #2c3e50;
+            --light-green: #a9dfbf;
+            --light-orange: #fad7a0;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--black);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn-primary {
+            background-color: var(--orange);
+            color: var(--white);
+            border: 2px solid var(--orange);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--white);
+            color: var(--orange);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--green);
+            border: 2px solid var(--green);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--green);
+            color: var(--white);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--black);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--green);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--green) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 90px;
+        }
+        
+        .hero-content {
+            width: 50%;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--white);
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: var(--white);
+            max-width: 500px;
+        }
+        
+        .hero-image {
+            position: absolute;
+            right: 5%;
+            width: 40%;
+            z-index: 1;
+        }
+        
+        /* Bubbles Animation */
+        .bubbles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+        
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            animation: rise 8s infinite ease-in;
+            bottom: -100px;
+        }
+        
+        @keyframes rise {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-1000px) scale(1.5);
+                opacity: 0;
+            }
+        }
+        
+        /* Problem-Solution Section */
+        .problem-solution {
+            background-color: var(--white);
+        }
+        
+        .problem-solution .container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .problem-content {
+            flex: 1;
+        }
+        
+        .problem-solution h2 {
+            color: var(--black);
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .problem-solution p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .problem-image {
+            flex: 1;
+            position: relative;
+        }
+        
+        .problem-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* What is Kombucha Section */
+        .kombucha-info {
+            background-color: var(--light-gray);
+        }
+        
+        .kombucha-info h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--black);
+            font-size: 36px;
+        }
+        
+        .kombucha-container {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .kombucha-image {
+            flex: 1;
+            position: relative;
+        }
+        
+        .kombucha-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        .kombucha-content {
+            flex: 1;
+        }
+        
+        .kombucha-content h3 {
+            color: var(--green);
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .kombucha-content ul {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .kombucha-content li {
+            margin-bottom: 10px;
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        .kombucha-content li:before {
+            content: "\f058";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: var(--green);
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            background: linear-gradient(135deg, var(--light-orange) 0%, var(--orange) 100%);
+            color: var(--white);
+        }
+        
+        .benefits h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 36px;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .benefit-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .benefit-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: var(--yellow);
+        }
+        
+        .benefit-card h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        
+        .benefit-card p {
+            line-height: 1.6;
+        }
+        
+        /* Product Showcase */
+        .products {
+            background-color: var(--white);
+        }
+        
+        .products h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--black);
+            font-size: 36px;
+        }
+        
+        .product-showcase {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .product-card {
+            width: 250px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .product-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .product-image {
+            width: 150px;
+            height: 300px;
+            margin: 0 auto 20px;
+            position: relative;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-image {
+            transform: translateY(-10px) rotate(5deg);
+        }
+        
+        .product-image img {
+            width: 100%;
+        }
+        
+        .product-name {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--black);
+            font-size: 18px;
+        }
+        
+        .product-desc {
+            color: #777;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        
+        /* Sustainability Section */
+        .sustainability {
+            background-color: var(--light-gray);
+        }
+        
+        .sustainability .container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .sustainability-content {
+            flex: 1;
+        }
+        
+        .sustainability h2 {
+            color: var(--black);
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .sustainability p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .sustainability-features {
+            margin-top: 30px;
+        }
+        
+        .sustainability-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .feature-icon {
+            color: var(--green);
+            font-size: 24px;
+            margin-right: 15px;
+        }
+        
+        .sustainability-image {
+            flex: 1;
+        }
+        
+        .sustainability-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(135deg, var(--green) 0%, var(--yellow) 100%);
+            color: var(--white);
+        }
+        
+        .testimonials h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 36px;
+        }
+        
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            margin: 0 15px;
+            backdrop-filter: blur(5px);
+            text-align: center;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 60px;
+        }
+        
+        .stat {
+            text-align: center;
+            margin: 20px;
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+        
+        .stat-label {
+            font-size: 16px;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            background-color: var(--white);
+        }
+        
+        .faq h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--black);
+            font-size: 36px;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .faq-question {
+            background-color: var(--light-gray);
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            line-height: 1.6;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 1000px;
+        }
+        
+        .faq-toggle {
+            font-size: 16px;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+        
+        /* Contact/Newsletter Section */
+        .contact {
+            background: linear-gradient(135deg, var(--black) 0%, #34495e 100%);
+            color: var(--white);
+        }
+        
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 36px;
+        }
+        
+        .contact-container {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        
+        .newsletter {
+            flex: 1;
+        }
+        
+        .newsletter h3 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .newsletter p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .newsletter-form {
+            display: flex;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 30px 0 0 30px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .newsletter-form button {
+            padding: 12px 20px;
+            background-color: var(--orange);
+            color: var(--white);
+            border: none;
+            border-radius: 0 30px 30px 0;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-icon {
+            font-size: 20px;
+            margin-right: 15px;
+            color: var(--yellow);
+        }
+        
+        .social-links {
+            margin-top: 30px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            color: var(--white);
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--orange);
+            transform: translateY(-5px);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--black);
+            color: var(--white);
+            padding: 30px 0;
+        }
+        
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-logo img {
+            height: 40px;
+        }
+        
+        .footer-links {
+            display: flex;
+        }
+        
+        .footer-links a {
+            color: var(--white);
+            margin-left: 20px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--orange);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+        }
+        
+        /* Falling Bottle Animation */
+        .falling-bottle {
+            position: absolute;
+            top: -300px;
+            right: 10%;
+            animation: fallingBottle 2s forwards ease-out;
+            z-index: 10;
+        }
+        
+        @keyframes fallingBottle {
+            0% {
+                transform: translateY(0) rotate(0);
+            }
+            50% {
+                transform: translateY(300px) rotate(10deg);
+            }
+            75% {
+                transform: translateY(280px) rotate(-5deg);
+            }
+            100% {
+                transform: translateY(300px) rotate(0);
+            }
+        }
+        
+        /* Cookie Consent */
+        .cookie-consent {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            padding: 20px;
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            transform: translateY(200%);
+            transition: transform 0.5s ease;
+        }
+        
+        .cookie-consent.show {
+            transform: translateY(0);
+        }
+        
+        .cookie-text {
+            flex: 1;
+            padding-right: 20px;
+        }
+        
+        .cookie-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .cookie-btn {
+            padding: 8px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+        }
+        
+        .accept-cookies {
+            background-color: var(--green);
+            color: var(--white);
+            border: none;
+        }
+        
+        .decline-cookies {
+            background-color: transparent;
+            color: var(--black);
+            border: 1px solid #ddd;
+        }
+        
+        .settings-cookies {
+            background-color: transparent;
+            color: var(--black);
+            border: 1px solid #ddd;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-content {
+                width: 60%;
+            }
+            
+            .hero-image {
+                width: 35%;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero-content {
+                width: 100%;
+                text-align: center;
+                padding: 0 20px;
+            }
+            
+            .hero p {
+                margin: 0 auto 30px;
+            }
+            
+            .hero-image {
+                position: static;
+                width: 60%;
+                margin: 30px auto 0;
+                display: block;
+            }
+            
+            .problem-solution .container,
+            .kombucha-container,
+            .sustainability .container,
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .sustainability-image,
+            .problem-image,
+            .kombucha-image {
+                margin-top: 30px;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .footer-links {
+                margin-top: 20px;
+            }
+            
+            .cookie-consent {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cookie-text {
+                padding-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                <a href="#"><img src="/api/placeholder/150/50" alt="Fizzora Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="btn btn-primary">Shop Now</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-aos="fade-up">Fizzora: Where Sparkle Meets Health</h1>
+                <p data-aos="fade-up" data-aos-delay="100">Premium Indian-inspired kombucha packed with probiotics. Discover the perfect blend of taste and wellness in every fizzy sip.</p>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <a href="#products" class="btn btn-primary">Shop Now</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="falling-bottle">
+            <img src="/api/placeholder/150/300" alt="Fizzora Bottle">
+        </div>
+        
+        <!-- Bubbles Animation -->
+        <div class="bubbles">
+            <div class="bubble" style="width:30px; height:30px; left:10%; animation-delay: 0s;"></div>
+            <div class="bubble" style="width:20px; height:20px; left:20%; animation-delay: 1s;"></div>
+            <div class="bubble" style="width:25px; height:25px; left:35%; animation-delay: 3s;"></div>
+            <div class="bubble" style="width:15px; height:15px; left:50%; animation-delay: 2s;"></div>
+            <div class="bubble" style="width:30px; height:30px; left:65%; animation-delay: 4s;"></div>
+            <div class="bubble" style="width:20px; height:20px; left:80%; animation-delay: 3.5s;"></div>
+            <div class="bubble" style="width:10px; height:10px; left:90%; animation-delay: 1.5s;"></div>
+            <div class="bubble" style="width:35px; height:35px; left:15%; animation-delay: 6s;"></div>
+            <div class="bubble" style="width:25px; height:25px; left:40%; animation-delay: 5s;"></div>
+            <div class="bubble" style="width:15px; height:15px; left:55%; animation-delay: 7s;"></div>
+            <div class="bubble" style="width:20px; height:20px; left:70%; animation-delay: 8s;"></div>
+            <div class="bubble" style="width:30px; height:30px; left:85%; animation-delay: 7.5s;"></div>
+        </div>
+    </section>
+
+    <!-- Problem-Solution Section -->
+    <section class="problem-solution" id="about">
+        <div class="container">
+            <div class="problem-content" data-aos="fade-right">
+                <h2>Refreshment with Purpose</h2>
+                <p>In a world of sugary drinks and limited probiotic options, Fizzora stands out as a revolutionary beverage that combines the benefits of probiotics with delightful Indian-inspired flavors.</p>
+                <p>Our proprietary "Flavor Lock" technique preserves the volatile spice aromas, creating a unique drinking experience that's both refreshing and beneficial for your health.</p>
+                <a href="#benefits" class="btn btn-primary">Discover the Difference</a>
+            </div>
+            <div class="problem-image" data-aos="fade-left">
+                <img src="/api/placeholder/500/400" alt="Fizzora vs Traditional Drinks Comparison">
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Kombucha Section -->
+    <section class="kombucha-info">
+        <div class="container">
+            <h2 data-aos="fade-up">The Power of Kombucha</h2>
+            <div class="kombucha-container">
+                <div class="kombucha-image" data-aos="fade-right">
+                    <img src="/api/placeholder/500/400" alt="Kombucha Fermentation Process">
+                </div>
+                <div class="kombucha-content" data-aos="fade-left">
+                    <h3>What is Kombucha?</h3>
+                    <p>Kombucha is a fermented tea drink packed with probiotics, antioxidants, and other beneficial compounds that support your overall health and wellbeing.</p>
+                    <h3>Heal your Gut, Heal your Body</h3>
+                    <ul>
+                        <li>Rich in probiotics that restore gut microbiota</li>
+                        <li>Contains beneficial acids that aid detoxification</li>
+                        <li>Supports immune function and gut-brain connection</li>
+                        <li>Provides B vitamins and antioxidants</li>
+                        <li>Natural energy boost without the caffeine crash</li>
+                    </ul>
+                    <p><strong>A happy gut = a happy body!</strong></p>
+                    <a href="#benefits" class="btn btn-secondary">Learn More About Probiotics</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <h2 data-aos="fade-up">Health Benefits You'll Love</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card" data-aos="zoom-in">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Gut Health</h3>
+                    <p>Restore balance to your digestive system with our live cultures, promoting healthy digestion and nutrient absorption.</p>
+                </div>
+                <div class="benefit-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Peak Immunity</h3>
+                    <p>Strengthen your body's natural defenses with probiotics that support your immune system function.</p>
+                </div>
+                <div class="benefit-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="benefit-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Preventing Allergies</h3>
+                    <p>Support your body's response to allergens through improved gut-immune connection.</p>
+                </div>
+                <div class="benefit-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Gastric Relief</h3>
+                    <p>Experience natural relief from common digestive discomforts and bloating.</p>
+                </div>
+                <div class="benefit-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="benefit-icon">
+                        <i class="fas fa-fire-alt"></i>
+                    </div>
+                    <h3>Anti-inflammatory</h3>
+                    <p>Help reduce inflammation in the body with powerful antioxidants and beneficial compounds.</p>
+                </div>
+                <div class="benefit-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="benefit-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Mental Clarity</h3>
+                    <p>Support the gut-brain axis for improved mood, focus and cognitive function.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 data-aos="fade-up">Meet the Fizzora Family</h2>
+            <div class="product-showcase">
+                <div class="product-card" data-aos="fade-up">
+                    <div class="product-image">
+                        <img src="/api/placeholder/150/300" alt="Fizzora Classic">
+                    </div>
+                    <h3 class="product-name">Fizzora Classic</h3>
+                    <p class="product-desc">Our signature blend with ginger, cardamom, and a hint of lemongrass.</p>
+                    <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+                <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-image">
+                        <img src="/api/placeholder/150/300" alt="Fizzora Masala Chai">
+                    </div>
+                    <h3 class="product-name">Masala Chai</h3>
+                    <p class="product-desc">The comforting flavors of traditional chai with a probiotic twist.</p>
+                    <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+                <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-image">
+                        <img src="/api/placeholder/150/300" alt="Fizzora Mango Lassi">
+                    </div>
+                    <h3 class="product-name">Mango Lassi</h3>
+                    <p class="product-desc">Sweet and tangy mango flavor inspired by the classic Indian drink.</p>
+                    <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+                <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-image">
+                        <img src="/api/placeholder/150/300" alt="Fizzora Turmeric Gold">
+                    </div>
+                    <h3 class="product-name">Turmeric Gold</h3>
+                    <p class="product-desc">Golden turmeric and black pepper for an anti-inflammatory boost.</p>
+                    <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Section -->
+    <section class="sustainability">
+        <div class="container">
+            <div class="sustainability-content" data-aos="fade-right">
+                <h2>Good for You, Good for the Planet</h2>
+                <p>At Fizzora, we believe that what's inside the bottle matters just as much as what's outside. That's why we're committed to sustainable practices at every step of our production process.</p>
+                <div class="sustainability-features">
+                    <div class="sustainability-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <div>
+                            <h4>Sustainable Packaging</h4>
+                            <p>Our bottles are made from recycled materials and are 100% recyclable.</p>
+                        </div>
+                    </div>
+                    <div class="sustainability-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Locally Produced</h4>
+                            <p>We brew our kombucha locally to reduce carbon footprint and support the community.</p>
+                        </div>
+                    </div>
+                    <div class="sustainability-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <div>
+                            <h4>Organic Ingredients</h4>
+                            <p>We source high-quality organic ingredients to ensure the best for you and the environment.</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-secondary">Our Sustainability Commitment</a>
+            </div>
+            <div class="sustainability-image" data-aos="fade-left">
+                <img src="/api/placeholder/500/400" alt="Fizzora Sustainability">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 data-aos="fade-up">What People Are Saying</h2>
+            <div class="testimonial-slider" data-aos="fade-up">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"I've tried many kombucha brands, but Fizzora's Indian-inspired flavors are truly unique. The Masala Chai flavor is now my daily must-have!"</p>
+                    <p class="testimonial-author">- Sarah K., Health Coach</p>
+                </div>
+            </div>
+            
+            <div class="stats-container">
+                <div class="stat" data-aos="fade-up">
+                    <div class="stat-number">88%</div>
+                    <div class="stat-label">Are aware of probiotic benefits</div>
+                </div>
+                <div class="stat" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number">5M+</div>
+                    <div class="stat-label">Health-conscious Germans interested in premium probiotics</div>
+                </div>
+                <div class="stat" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number">€3.6B</div>
+                    <div class="stat-label">German probiotic drink market</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 data-aos="fade-up">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question">
+                        What exactly is kombucha?
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kombucha is a fermented tea drink made by adding specific strains of bacteria, yeast, and sugar to black or green tea. The fermentation process creates probiotics and other beneficial compounds that support gut health and overall wellness.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question">
+                        What makes Fizzora different from other kombuchas?
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Fizzora stands out with its authentic Indian-inspired flavors and our proprietary "Flavor Lock" technique that preserves volatile spice aromas. We also focus on low/zero sugar formulations while maintaining great taste, and we're committed to sustainable, local production.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question">
+                        How much sugar is in Fizzora?
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Unlike many other beverages, Fizzora is formulated to be low in sugar. Our products contain minimal natural sugars, with most varieties having less than 2g per 100ml. We never add artificial sweeteners, preservatives, or flavorings.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question">
+                        How should I store Fizzora and how long does it last?
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Fizzora should be stored refrigerated for optimal taste and probiotic preservation. An unopened bottle will stay fresh for up to 3 months. After opening, consume within 3-5 days for the best flavor and benefits.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-question">
+                        Is Fizzora suitable for vegans and people with food allergies?
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Fizzora is 100% plant-based and vegan-friendly. Our products are free from common allergens including gluten, dairy, nuts, and soy. However, we always recommend checking the label if you have specific dietary concerns.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Newsletter Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 data-aos="fade-up">Stay Connected</h2>
+            <div class="contact-container">
+                <div class="newsletter" data-aos="fade-right">
+                    <h3>Subscribe for Updates</h3>
+                    <p>Be the first to know about new flavors, promotions, and kombucha lifestyle tips. Join our community today!</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+                <div class="contact-info" data-aos="fade-left">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <p>Hauptstraße 25, 32657 Lemgo, Germany</p>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <p>hello@fizzora.de</p>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <p>+49 12345 67890</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="/api/placeholder/120/40" alt="Fizzora Logo">
+                </div>
+                <div class="footer-links">
+                    <a href="impressum.html">Impressum</a>
+                    <a href="datenschutz.html">Datenschutz</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Fizzora. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent -->
+    <div class="cookie-consent">
+        <div class="cookie-text">
+            <p>We use cookies to improve your experience on our website. By continuing to browse, you consent to our use of cookies.</p>
+        </div>
+        <div class="cookie-buttons">
+            <button class="cookie-btn accept-cookies">Accept All</button>
+            <button class="cookie-btn settings-cookies">Cookie Settings</button>
+            <button class="cookie-btn decline-cookies">Decline All</button>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS animation
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+            
+            // Show cookie consent after 2 seconds
+            setTimeout(function() {
+                document.querySelector('.cookie-consent').classList.add('show');
+            }, 2000);
+            
+            // Cookie consent buttons
+            const cookieConsent = document.querySelector('.cookie-consent');
+            const acceptBtn = document.querySelector('.accept-cookies');
+            const declineBtn = document.querySelector('.decline-cookies');
+            const settingsBtn = document.querySelector('.settings-cookies');
+            
+            acceptBtn.addEventListener('click', function() {
+                cookieConsent.classList.remove('show');
+                localStorage.setItem('cookieConsent', 'accepted');
+            });
+            
+            declineBtn.addEventListener('click', function() {
+                cookieConsent.classList.remove('show');
+                localStorage.setItem('cookieConsent', 'declined');
+            });
+            
+            settingsBtn.addEventListener('click', function() {
+                alert('Cookie settings would be displayed here in a production site.');
+            });
+            
+            // Check if consent was previously given
+            if (localStorage.getItem('cookieConsent')) {
+                cookieConsent.classList.remove('show');
+            }
+            
+            // FAQ accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle active class on clicked item
+                    item.classList.toggle('active');
+                });
+            });
+            
+            // Mobile menu toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+            });
+            
+            // Create more bubbles dynamically
+            const bubblesContainer = document.querySelector('.bubbles');
+            
+            for (let i = 0; i < 15; i++) {
+                const bubble = document.createElement('div');
+                bubble.classList.add('bubble');
+                
+                const size = Math.random() * 30 + 10;
+                const left = Math.random() * 100;
+                const delay = Math.random() * 10;
+                
+                bubble.style.width = `${size}px`;
+                bubble.style.height = `${size}px`;
+                bubble.style.left = `${left}%`;
+                bubble.style.animationDelay = `${delay}s`;
+                
+                bubblesContainer.appendChild(bubble);
+            }
+            
+            // Product bottle hover effect
+            const productCards = document.querySelectorAll('.product-card');
+            
+            productCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    const bottle = this.querySelector('.product-image');
+                    bottle.style.transform = 'translateY(-10px) rotate(5deg)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    const bottle = this.querySelector('.product-image');
+                    bottle.style.transform = 'translateY(0) rotate(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
